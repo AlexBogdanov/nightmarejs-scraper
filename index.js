@@ -31,7 +31,7 @@ const getAdress = async id => {
     } catch(error) {
         console.log(error);
     }
-
+    
     try {
         await nightmare
             .wait('input[name="titleNo"]')
@@ -55,7 +55,3 @@ const getAdress = async id => {
         return undefined;
     }
 };
-
-getAdress(numbers[0])
-    .then(data => console.dir(data))
-    .catch(error => console.error(error));
